@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 module Respo
-  module Success
-    class Update < Respo::Success::Base
+  module Successes
+    class Update < Respo::Successes::Base
     end
   end
 end

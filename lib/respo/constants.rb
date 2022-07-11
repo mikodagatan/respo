@@ -18,6 +18,10 @@ module Respo
         success: :ok,
         error: :bad_request
       },
+      show: {
+        success: :ok,
+        error: :bad_request
+      },
       new: {
         success: :ok,
         error: :bad_request

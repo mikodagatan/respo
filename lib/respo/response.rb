@@ -28,7 +28,7 @@ module Respo
 
     def serializer
       name = camelize(Respo.configuration.serializer.to_s)
-      @serializer ||= Object.const_get("Serializers::#{name}")
+      @serializer ||= Object.const_get("Respo::Serializers::#{name}")
     end
   end
 end

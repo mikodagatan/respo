@@ -3,14 +3,14 @@
 module Respo
   module Serializers
     module Blueprinter
-      include Helpers
+      include Respo::Helpers
 
       def self.render(record, **args)
         serializer_constant(record).render(record, **args)
       end
 
-      def serializer_constant(record)
-        Object.const_get("#{model_name(record)}Blueprinter")
+      def self.serializer_constant(record)
+        Object.const_get("#{Respo::Helpers.model_name(record)}Blueprinter")
       end
     end
   end

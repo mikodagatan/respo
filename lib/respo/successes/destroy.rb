@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 module Respo
-  module Success
-    class Destroy < Respo::Success::Base
+  module Successes
+    class Destroy < Respo::Successes::Base
       def data
         "Deleted #{record_name} #{record}"
       end

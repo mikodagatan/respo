@@ -1,9 +1,7 @@
 # frozen_string_literal: true
 
-
-
 module Respo
-  module Success
+  module Successes
     class Base < Response
       def initialize(record, view: nil, root: nil)
         super(record, view: view, root: root)
@@ -20,11 +18,7 @@ module Respo
       end
 
       def status_code
-        :ok
-      end
-
-      def action_name
-        this.class.name.split('::').last
+        Respo::Constants::STATUSES.dig(action_name(self), :success).to_sym
       end
     end
   end
