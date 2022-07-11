@@ -37,4 +37,10 @@ Gem::Specification.new do |spec|
   # For more information and examples about making a new gem, check out our
   # guide at: https://bundler.io/guides/creating_gem.html
   spec.metadata['rubygems_mfa_required'] = 'true'
+  spec.add_development_dependency 'rake'
+  spec.add_development_dependency 'reek'
+  spec.add_development_dependency 'rspec'
+  spec.add_development_dependency 'rubocop'
+  spec.add_development_dependency 'simplecov', '~> 0.17.1'
+  spec.add_dependency 'blueprinter'
 end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Respo
   class Configuration
     attr_accessor :serializer
@@ -5,15 +7,13 @@ module Respo
     def initialize
       @serializer = :blueprinter
     end
+  end
 
-    class << self
-      def configuration
-        @configuration ||= new
-      end
+  def self.configuration
+    @configuration ||= Configuration.new
+  end
 
-      def configure
-        yield configuration if block_given?
-      end
-    end
+  def self.configure
+    yield configuration if block_given?
   end
 end

@@ -1,8 +1,7 @@
 # frozen_string_literal: true
 
-require_relative 'respo/version'
-require_relative 'respo/constants'
-require_relative 'respo/respo'
+require_relative 'initializer'
+require_relative 'respo/base'
 
 module Respo
   class Error < StandardError; end
