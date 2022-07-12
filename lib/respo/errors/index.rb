@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 module Respo
-  module Successes
-    class Index < Respo::Successes::Base
+  module Errors
+    class Index < Respo::Errors::Base
     end
   end
 end

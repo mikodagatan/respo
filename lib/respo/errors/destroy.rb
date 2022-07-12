@@ -2,7 +2,7 @@
 
 module Respo
   module Errors
-    class Show < Respo::Errors::Base
+    class Destroy < Respo::Errors::Base
     end
   end
 end

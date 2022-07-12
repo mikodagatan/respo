@@ -19,7 +19,6 @@ module Respo
 
     def initialize(record, **args)
       @record = record
-      puts "Response record: #{record}"
 
       # NOTE: dynamically define instance variables
       args.each do |key, value|

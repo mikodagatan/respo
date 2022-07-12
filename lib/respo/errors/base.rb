@@ -16,6 +16,8 @@ module Respo
   end
 end
 
+require_relative 'index'
 require_relative 'show'
+require_relative 'create'
 require_relative 'update'
 require_relative 'destroy'

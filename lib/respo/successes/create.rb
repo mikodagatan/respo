@@ -2,7 +2,7 @@
 
 module Respo
   module Successes
-    class Index < Respo::Successes::Base
+    class Create < Respo::Successes::Base
     end
   end
 end

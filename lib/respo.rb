@@ -3,9 +3,7 @@
 require_relative 'respo/base'
 
 module Respo
-  include Helpers
-
-  def self.method_missing(method, record, **args)
+  def self.method_missing(method, record, **args) # rubocop:disable Style/MissingRespondToMissing
     action, status = method.to_s.split('_')
 
     return 'No Method' unless %w[success error].include?(status)

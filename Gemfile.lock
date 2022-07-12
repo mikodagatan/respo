@@ -1,7 +1,8 @@
 PATH
   remote: .
   specs:
-    respo (0.1.6)
+    respo (0.2.0)
+      activerecord
       blueprinter
 
 GEM
