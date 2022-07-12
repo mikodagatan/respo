@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    respo (0.1.1)
+    respo (0.1.6)
       blueprinter
 
 GEM

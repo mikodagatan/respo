@@ -9,7 +9,7 @@ RSpec.describe Respo::Successes::Index do
       end
     end
 
-    class ModelBlueprinter
+    class ModelBlueprint
       attr_accessor :record, :view, :root
 
       def initialize(record, view: nil, root: nil)
