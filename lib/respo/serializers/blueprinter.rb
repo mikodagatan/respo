@@ -8,7 +8,7 @@ module Respo
       end
 
       def self.serializer_constant(record)
-        Object.const_get("#{model_name(record)}Blueprinter")
+        Object.const_get("#{model_name(record)}Blueprint")
       end
 
       def self.model_name(record)
