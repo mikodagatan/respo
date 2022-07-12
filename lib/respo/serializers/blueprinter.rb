@@ -13,7 +13,7 @@ module Respo
 
       def self.model_name(record)
         model_name = record.class.name
-        wrapped = record.is_a?(ActiveRecord::Relation) || record.is_a?(Array)
+        wrapped = record.is_a?(Array) || model_name == 'ActiveRecord::Relation'
         if wrapped
           record[0].class.name
         else
