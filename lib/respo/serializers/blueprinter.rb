@@ -13,7 +13,14 @@ module Respo
 
       def self.model_name(record)
         model_name = record.class.name
-        record.is_a?(Array) ? record[0].class.name : model_name
+        if %w[
+          Array
+          ActiveRecord::Relation
+        ].includes?(model_name)
+          record[0].class.name
+        else
+          model_name
+        end
       end
     end
   end
