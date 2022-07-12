@@ -12,7 +12,8 @@ module Respo
       end
 
       def self.model_name(record)
-        record.class.name.split('::').last
+        model_name = record.class.name
+        record.is_a?(Array) ? record[0].class.name : model_name
       end
     end
   end
