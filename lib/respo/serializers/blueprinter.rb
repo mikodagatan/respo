@@ -12,8 +12,8 @@ module Respo
       end
 
       def self.model_name(record)
-        model_name = record.klass&.name || record&.class&.name
-        wrapped = record.is_a?(Array)
+        model_name =  record&.class&.name
+        wrapped = record.is_a?(Array) || record.is_a?(ActiveRecord::Relation)
         if wrapped
           record[0].class.name
         else

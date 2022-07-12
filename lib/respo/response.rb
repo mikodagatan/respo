@@ -7,7 +7,7 @@ module Respo
     extend Forwardable
     include Helpers
 
-    attr_reader :record
+    attr_reader :record, :view, :root
 
     def_delegators :serializer, :render
 
@@ -19,6 +19,7 @@ module Respo
 
     def initialize(record, **args)
       @record = record
+      puts "Response record: #{record}"
 
       # NOTE: dynamically define instance variables
       args.each do |key, value|

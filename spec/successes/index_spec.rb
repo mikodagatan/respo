@@ -35,13 +35,13 @@ RSpec.describe Respo::Successes::Index do
   let(:expected_response) { { json: { record: record, view: :normal, root: nil }, status: :ok } }
 
   it 'uses the ModelBlueprint' do
-    expect(Respo::Successes::Index.call(record, view: :normal)).to eq(expected_response)
+    expect(Respo.index_success(record, view: :normal)).to eq(expected_response)
   end
 
   context 'when record is an array' do
     it 'uses the ModelBlueprint' do
-      expect(Respo::Successes::Index.call(record_array,
-                                          view: :normal)[:json][:record][0].var1).to eq('Nice')
+      expect(Respo.index_success(record_array,
+                                 view: :normal)[:json][:record][0].var1).to eq('Nice')
     end
   end
 end
