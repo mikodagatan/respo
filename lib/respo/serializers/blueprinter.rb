@@ -16,7 +16,7 @@ module Respo
         if %w[
           Array
           ActiveRecord::Relation
-        ].includes?(model_name)
+        ].include?(model_name)
           record[0].class.name
         else
           model_name
